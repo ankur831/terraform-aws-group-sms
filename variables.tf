@@ -40,7 +40,7 @@ variable "role_name" {
 
 variable "subscriptions" {
   description = "List of telephone numbers to subscribe to SNS."
-  type        = "list"
+  type        = list(string)
   default     = []
 }
 
@@ -56,3 +56,4 @@ variable "topic_name" {
 variable "usage_report_s3_bucket" {
   description = "The Amazon S3 bucket to receive daily SMS usage reports. The bucket policy must grant write access to Amazon SNS."
 }
+
